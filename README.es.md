@@ -40,8 +40,8 @@ Forge se adapta dinámicamente a las herramientas de tu entorno:
 flowchart TD
     Trigger([Tarea o Ticket del Desarrollador]) --> Router{¿Herramientas Multi-Agente Disponibles?}
     
-    Router -- Sí (Modo Flota) --> Fleet[Invocar Subagentes Especializados]
-    Router -- No (Modo Solo) --> Solo[Cambio Secuencial de Rol en Sesión]
+    Router -->|"Sí (Modo Flota)"| Fleet[Invocar Subagentes Especializados]
+    Router -->|"No (Modo Solo)"| Solo[Cambio Secuencial de Rol en Sesión]
     
     Fleet --> P1[Recon Agent: Exploración de Solo Lectura]
     Fleet --> P3[Architect Agent: Análisis Dual y Mermaid]

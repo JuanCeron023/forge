@@ -40,8 +40,8 @@ Forge dynamically adapts to your agentic runtime environment:
 flowchart TD
     Trigger([Developer Task / Ticket]) --> Router{Multi-Agent Tools Available?}
     
-    Router -- Yes (Fleet Mode) --> Fleet[Spawn Specialized Subagents]
-    Router -- No (Solo Mode) --> Solo[Sequential Persona Shifts In-Session]
+    Router -->|"Yes (Fleet Mode)"| Fleet[Spawn Specialized Subagents]
+    Router -->|"No (Solo Mode)"| Solo[Sequential Persona Shifts In-Session]
     
     Fleet --> P1[Recon Agent: Read-Only Discovery]
     Fleet --> P3[Architect Agent: Dual Analysis & Mermaid]
